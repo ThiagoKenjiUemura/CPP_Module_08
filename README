@@ -1,41 +1,56 @@
-# 🟢 C++ Module 08 - Templated Containers, Iterators, and Algorithms
+🟢 C++ Module 08 - Templated Containers, Iterators, and Algorithms
 
-> *"A deep dive into the heart of the C++ Standard Template Library (STL)."*
+"A deep dive into the heart of the C++ Standard Template Library (STL)."
 
-## 📖 About the Project
+📖 About the Project
 
-This project from the 42 curriculum aims to introduce the advanced C++ ecosystem, encouraging the use of **Containers, Iterators, and Algorithms** from the standard library (STL) instead of manually implementing methods using C. Additionally, all developed classes follow the strict standards of the **Orthodox Canonical Form**.
+This project from the 42 curriculum aims to introduce the advanced C++ ecosystem, encouraging the use of Containers, Iterators, and Algorithms from the standard library (STL) instead of manually implementing methods using C. Additionally, all developed classes follow the strict standards of the Orthodox Canonical Form.
 
-## 🚀 Challenges and Exercises
+🚀 Challenges and Exercises
 
-### 🔍 Ex00: Easy Find
+🔍 Ex00: Easy Find
 
-**Objective:** Introduction to function templates and algorithms.
+Objective: Introduction to function templates and algorithms.
 
-- Implemented a generic function template called `easyfind`, which takes a generic type `T` (representing an integer container) and an integer to search for.
-- Uses algorithms from the `<algorithm>` library to find the first occurrence of the value, throwing an appropriate exception if the element does not exist.
+Implemented a generic function template called easyfind, which takes a generic type T (representing an integer container) and an integer to search for.
 
-### 📏 Ex01: Span
+Uses algorithms from the <algorithm> library to find the first occurrence of the value, throwing an appropriate exception if the element does not exist.
 
-**Objective:** Advanced encapsulation and large-scale data manipulation.
+📏 Ex01: Span
 
-- Created the `Span` class, capable of storing a maximum of `N` integers, as specified in its constructor.
-- Implemented the `shortestSpan()` and `longestSpan()` methods to calculate the shortest and longest distances between all stored numbers.
-- **Highlight:** Implemented a dedicated template method to populate the container with thousands of numbers at once using an iterator range (`begin` and `end`). Successfully tested with more than 10,000 numbers.
+Objective: Advanced encapsulation and large-scale data manipulation.
 
-### 🧬 Ex02: Mutated Abomination (MutantStack)
+Created the Span class, capable of storing a maximum of N integers, as specified in its constructor.
 
-**Objective:** Inheritance and exploration of container adapters.
+Implemented the shortestSpan() and longestSpan() methods to calculate the shortest and longest distances between all stored numbers.
 
-- The standard C++ `std::stack` container is not directly iterable by default.
-- Created the generic `MutantStack` class to overcome this limitation. By directly inheriting from the original stack, it accesses its protected components and provides full iterator support, transforming the stack into an iterable data structure while preserving its fundamental LIFO (Last In, First Out) behavior.
+Highlight: Implemented a dedicated template method to populate the container with thousands of numbers at once using an iterator range (begin and end). Successfully tested with more than 10,000 numbers.
 
-## 🛠️ Technologies and Guidelines
+🧬 Ex02: Mutated Abomination (MutantStack)
 
-- Code is written strictly in the **C++98** standard.
-- Strict compilation using `c++` with the `-Wall -Wextra -Werror` flags.
-- Complete prevention of memory leaks in dynamic memory allocations.
+Objective: Inheritance and exploration of container adapters.
 
-## 🏁 How to Run
+The standard C++ std::stack container is not directly iterable by default.
 
-The project is divided
+Created the generic MutantStack class to overcome this limitation. By directly inheriting from the original stack, it accesses its protected components and provides full iterator support, transforming the stack into an iterable data structure while preserving its fundamental LIFO (Last In, First Out) behavior.
+
+🛠️ Technologies and Guidelines
+
+Code is written strictly in the C++98 standard.
+
+Strict compilation using c++ with the -Wall -Wextra -Werror flags.
+
+Complete prevention of memory leaks in dynamic memory allocations.
+
+🏁 How to Run
+
+The project is divided into separate directories for each exercise. To compile and test any of them, navigate to the desired directory and use the included Makefile:
+
+# Navigate to the exercise directory (e.g., ex01)
+cd ex01/
+
+# Compile the project
+make
+
+# Run the generated executable
+./Span
