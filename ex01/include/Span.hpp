@@ -20,23 +20,23 @@ class Span{
 		~Span();
 
 		void addNumber(int number);
-		int shortestSpan() const;
-		int longestSpan() const;
+		int shortestSpan()	const;
+		int longestSpan()	const;
 
-		class SpanFullExcepion : public std::exception{
+		class SpanFullException : public std::exception {
 			public:
 				virtual const char* what() const throw();
 		};
 
-		class NotEnoughNumbersException : public std::exception{
+		class NotEnoughNumbersException : public std::exception {
 			public:
 				virtual const char* what() const throw();
 		};
 
-		template <typename Iterator> 
+		template <typename Iterator>
 		void addNumbers(Iterator begin, Iterator end){
-			if(std::distance(begin, end) + _numbers.size() > _maxSize){
-				throw SpanFullExcepion();
+			if (std::distance(begin, end) + _numbers.size() > _maxSize){
+				throw SpanFullException();
 			}
 			_numbers.insert(_numbers.end(), begin, end);
 		}
